@@ -1,0 +1,29 @@
+Java based Telnet Server
+Written by Aiman Alsari 10/9/2013
+
+=============
+Quick Setup
+=============
+
+Build using maven:
+	mvn package
+
+Run the jar file using:
+	java -cp target/telnet-server-1.0-SNAPSHOT.jar nz.co.ahc.TelnetServer
+
+This will start the telnet server with default options. You can connect to this using a telnet client on port 8080
+
+
+==============
+Configuration
+==============
+
+You can configure the telnet server using a configuration file called server.cfg.
+The cfg file is a standard key-value pair properties file and is read from the working directory.
+
+The available properties are:
+ 
+ port=[The port to run the server on, default 8080]
+ host=[The host name or IP address that we are binding this socket to, defaults to 0.0.0.0, falls back to the loopback interface]
+ max_clients=[The maximum number of clients and threads that are run before the server starts blocking, default 10]
+ home_dir=[The directory that the file manager starts off at, default is the directory that the Server is located in]
